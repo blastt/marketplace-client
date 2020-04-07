@@ -1,9 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css"
 
 import Navbar from "./components/navbar.component"
-import OffersList from "./components/offer/offers-list.component"
+import Offers from "./components/offer/offers.component"
 import UsersList from "./components/user/users-list-component"
 import CreateOffer from './components/offer/create-offer.component';
 
@@ -15,11 +15,14 @@ function App() {
       <Navbar />
       <div className="container">
         <br />
-        <Route path="/" exact component={OffersList} />
-        <Route path="/offer/:id" component={CreateOffer} />
-        <Route path="/offers" component={OffersList} />
-        <Route path="/offer/add" component={CreateOffer} />
+        <Switch>
+        <Route path="/" exact component={Offers} />
+        <Route path="/offers/:id" component={UsersList} />
+        <Route path="/offers" component={Offers} />
+        <Route path="/offers/add" component={CreateOffer} />
         <Route path="/users" component={UsersList} />
+        </Switch>
+       
       </div>
 
     </Router>

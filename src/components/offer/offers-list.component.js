@@ -50,16 +50,16 @@ export default class OffersList extends Component {
             .catch(err => {
                 console.log(err);
             })
-    }
-
-    offersList() {
-        return this.state.offers.map(currentOffer => {
-            return (<Offer offer={currentOffer} key={currentOffer.id} />)
-        })
+        console.log(this.state.offers)
     }
 
     render() {
+        const offers = this.state.offers.map(currentOffer => {
+            return (<Offer offer={currentOffer} key={currentOffer.id} />)
+        })
+        console.log(this.state.offers)
         return (
+            
             <table className="table">
                 <thead>
                     <tr>
@@ -73,7 +73,7 @@ export default class OffersList extends Component {
                     </tr>
                 </thead>
                 <tbody>
-                    {this.offersList()}
+                    {offers}
                 </tbody>
             </table>
         )
