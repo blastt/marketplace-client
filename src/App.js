@@ -1,30 +1,37 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css"
 
 import Navbar from "./components/navbar.component"
 import Offers from "./components/offer/offers.component"
 import UsersList from "./components/user/users-list-component"
 import CreateOffer from './components/offer/create-offer.component';
 
+import 'antd/dist/antd.css';
+import { Layout } from 'antd';
+const { Header, Footer, Sider, Content } = Layout;
+
 function App() {
   return (
+    
     <Router>
       
+      <Layout>
       
+    
       <Navbar />
-      <div className="container">
+      <div>
         <br />
         <Switch>
         <Route path="/" exact component={Offers} />
+        <Route path="/offers/add" component={CreateOffer} />
         <Route path="/offers/:id" component={UsersList} />
         <Route path="/offers" component={Offers} />
-        <Route path="/offers/add" component={CreateOffer} />
+        
         <Route path="/users" component={UsersList} />
         </Switch>
        
       </div>
-
+      </Layout>
     </Router>
   );
 }
