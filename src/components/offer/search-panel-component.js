@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Card } from 'antd';
 import { Slider } from 'antd';
 import { SearchOutlined, RedoOutlined } from '@ant-design/icons';
-import { Row, Col, Divider } from 'antd';
+import { Row, Col, Divider, Checkbox } from 'antd';
 import {
     Form,
     Input,
@@ -31,6 +31,7 @@ export default function SearchPanel() {
                 <Form.Item label="Input">
                     <Input />
                 </Form.Item>
+
                 <Form.Item label="Select">
                     <Select>
                         <Select.Option value="demo">Demo</Select.Option>

@@ -35,7 +35,7 @@ export default function OffersList() {
                 console.log(offers);
             })
 
-    });
+    }, []);
     return (
         <Card title={<div>Small size card</div>}>
             <List

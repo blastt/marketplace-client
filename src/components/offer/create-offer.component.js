@@ -20,6 +20,7 @@ import {
     TreeSelect,
     Switch,
 } from 'antd';
+import { throws } from 'assert';
 const { TextArea } = Input;
 const { Option } = Select;
 function getBase64(file) {
@@ -201,7 +202,7 @@ export default class CreateOffer extends Component {
                                 <Form
                                     labelCol={{
                                         span: 6,
-                                    }}
+                                    }}                                    
                                     layout="horizontal"
                                 >
                                     <Form.Item label="Game">

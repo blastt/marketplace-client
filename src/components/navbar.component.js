@@ -11,7 +11,7 @@ export default class Navbar extends Component {
         return (
             <Header theme="light" className="header" style={{ zIndex: 1, width: '100%', background: '#ffffff', padding: '0px 250px' }}>
                 <div className="logo" />
-                <Menu theme="light" mode="horizontal" defaultSelectedKeys={['2']}>
+                <Menu theme="light" mode="horizontal" defaultSelectedKeys={['1']}>
                     <Menu.Item key="1">
                         <Link to="/offers" className="nav-link">Offers list</Link>
                     </Menu.Item>
@@ -19,15 +19,18 @@ export default class Navbar extends Component {
                         <Link to="/offers/add" className="nav-link">Create Offer</Link>
                     </Menu.Item>
                     <Menu.Item key="3">
+                        <Link to="/games/add" className="nav-link">Create Game</Link>
+                    </Menu.Item>
+                    <Menu.Item key="4">
                         <Link to="/users" className="nav-link">Users list</Link>
                     </Menu.Item>
                     
-                        <Search
-                            placeholder="input search text"
-                            onSearch={value => console.log(value)}
-                            style={{ width: 400 }}
-                            size="large"
-                        />
+                    <Menu.Item key="5">
+                        <Link to="/users" className="nav-link">Sign up</Link>
+                    </Menu.Item> 
+                    <Menu.Item key="6">
+                        <Link to="/users" className="nav-link">Sign in</Link>
+                    </Menu.Item>    
                     
                 </Menu>
 
